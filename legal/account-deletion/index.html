@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Erlli - Account Deletion</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="e-commerce, shopping, mobile app, Erlli, account deletion" name="keywords">
+    <meta content="Request the deletion of your Erlli account by following the steps outlined on this page." name="description">
+    <!-- Favicon -->
+    <link href="../../img/icon.png" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="../../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+        <!-- Navbar Start -->
+        <div class="container-xxl position-relative p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="../../index.html" class="navbar-brand p-0">
+                    <h1 class="m-0">Erlli</h1>
+                    <!-- <img src="../../img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="../../index.html#home" class="nav-item nav-link">Home</a>
+                        <a href="../../index.html#about" class="nav-item nav-link">About</a>
+                        <a href="../../index.html#feature" class="nav-item nav-link">Features</a>
+                        <a href="../../index.html#review" class="nav-item nav-link">Reviews</a>
+                        <a href="../../index.html#contact" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Start Shopping</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+        <!-- Account Deletion Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Account Deletion</h5>
+                    <h1 class="mb-5">Erlli Account Deletion</h1>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="wow fadeInUp" data-wow-delay="0.3s">
+                            <p>We're sorry to see you go. Please follow the steps below to request the deletion of your account.</p>
+                            <h2>Warning</h2>
+                            <div class="bg-white text-danger border border-danger rounded p-4 mb-4">
+                                <p class="mb-0">Account deletion is permanent and cannot be undone. All your data, including messages, content, and connections, will be permanently removed.</p>
+                            </div>
+                            <h2>Deletion Process</h2>
+                            <p>To request the deletion of your account, please fill out the form below with the username and email address associated with your Erlli account. Our team will verify your request and process the deletion within 7 business days. You will receive a confirmation email once the process is complete.</p>
+                            <form id="deletionForm">
+                                <input type="hidden" name="csrf_token" id="csrf_token">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                                            <label for="username">Username</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Account Email" required>
+                                            <label for="email">Account Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Reason for leaving (Optional)" id="reason" name="reason" style="height: 150px"></textarea>
+                                            <label for="reason">Reason for leaving (Optional)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-primary-gradient rounded-pill py-3 px-5" type="submit">Submit Deletion Request</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Account Deletion End -->
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="text-white mb-4">Contact</h4>
+                        <p><i class="fa fa-envelope me-3"></i>info@erlli.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <a class="btn btn-link" href="../../index.html#about">About Erlli</a>
+                        <a class="btn btn-link" href="../../index.html#contact">Contact Us</a>
+                        <a class="btn btn-link" href="../privacy/index.html">Privacy Policy</a>
+                        <a class="btn btn-link" href="../terms/index.html">Terms & Conditions</a>
+                        <a class="btn btn-link" href="../../index.html#contact">Support</a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="text-white mb-4">Legal</h4>
+                        <a class="btn btn-link" href="../privacy/index.html">Privacy Policy</a>
+                        <a class="btn btn-link" href="../terms/index.html">Terms of Service</a>
+                        <a class="btn btn-link" href="../dmca/index.html">DMCA</a>
+                        <a class="btn btn-link" href="../child-safety/index.html">Child Safety</a>
+                        <a class="btn btn-link" href="index.html">Account Deletion</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="../../index.html">Erlli</a>, All Rights Reserved.
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="../../index.html#home">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="../FAQs/index.html">FAQs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+    </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../lib/wow/wow.min.js"></script>
+    <script src="../../lib/easing/easing.min.js"></script>
+    <script src="../../lib/waypoints/waypoints.min.js"></script>
+    <script src="../../lib/counterup/counterup.min.js"></script>
+    <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="../../js/main.js"></script>
+    <!-- EmailJS Form Handling -->
+    <script>
+        // Initialize EmailJS with your User ID
+        emailjs.init("-GfhcsU37krdszHkp");
+        // Generate a simple CSRF token
+        let csrfToken = Math.random().toString(36).substring(2);
+        document.getElementById('csrf_token').value = csrfToken;
+        // Handle form submission
+        document.getElementById('deletionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Validate CSRF token (basic client-side check)
+            const submittedToken = document.getElementById('csrf_token').value;
+            if (submittedToken !== csrfToken) {
+                alert('Invalid CSRF token');
+                return;
+            }
+            // Validate form inputs
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const reason = document.getElementById('reason').value.trim();
+            if (!username || !email) {
+                alert('Username and email are required');
+                return;
+            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert('Invalid email format');
+                return;
+            }
+            // Prepare EmailJS parameters
+            const templateParams = {
+                username: username,
+                email: email,
+                reason: reason || 'No reason provided',
+                to_email: 'support@erlli.com'
+            };
+            // Send email via EmailJS
+            emailjs.send('service_5agesme', 'template_65rlipi', templateParams)
+                .then(function(response) {
+                    alert('Your deletion request was sent successfully! You will receive a confirmation email within 7 business days.');
+                    document.getElementById('deletionForm').reset();
+                    // Regenerate CSRF token and update variable
+                    csrfToken = Math.random().toString(36).substring(2);
+                    document.getElementById('csrf_token').value = csrfToken;
+                }, function(error) {
+                    alert('Error sending deletion request: ' + JSON.stringify(error));
+                });
+        });
+    </script>
+</body>
+</html>
